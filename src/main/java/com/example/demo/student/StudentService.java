@@ -17,16 +17,11 @@ public class StudentService {
 
     public List<Student> getStudents (){
         return studentRepository.findAll();
-//        return List.of(
-////                new Student(
-////                        1L,
-////                        "Lorenzo",
-////                        "lorenzo@gmail.com",
-////                        LocalDate.of(2000, Month.JANUARY,5),
-////                        21
-////                )
-//        );
-
     }
 
+    public void addNewStudent(Student student) {
+        System.out.println(student);
+    }
+
+    public void
 }
