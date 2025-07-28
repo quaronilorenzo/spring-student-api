@@ -8,8 +8,8 @@ import java.time.LocalDate;
 public class Student {
     @Id
     @SequenceGenerator(
-            name = "studente_sequence",
-            sequenceName = "studente_sequence",
+            name = "student_sequence",
+            sequenceName = "student_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
