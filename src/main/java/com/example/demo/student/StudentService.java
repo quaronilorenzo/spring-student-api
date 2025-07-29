@@ -3,6 +3,8 @@ package com.example.demo.student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -29,5 +31,11 @@ public class StudentService {
         studentRepository.save(student);
     }
 
-
+    public void deleteStudent(Long studentId) {
+        boolean studentExists = studentRepository.existsById(studentId);
+        if(!studentExists){
+            throw new IllegalStateException("Student doesnt exist");
+        }
+        studentRepository.deleteById(studentId);
+    }
 }
